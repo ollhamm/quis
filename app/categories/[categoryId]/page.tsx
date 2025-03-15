@@ -79,7 +79,7 @@ async function page({ params }: any) {
 
   return (
     <div>
-      <h1 className="mb-6 text-4xl font-bold">All Quizzes</h1>
+      <h1 className="mb-6 text-4xl font-bold">Semua Kuis</h1>
 
       {quizzes.length > 0 ? (
         <div className="mb-8 grid grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-6">

@@ -13,19 +13,19 @@ function Header() {
 
   const menu = [
     {
-      name: "Home",
+      name: "BERANDA",
       icon: home,
       link: "/",
     },
     {
-      name: "My Stats",
+      name: "Statistik Saya",
       icon: chart,
       link: "/stats",
     },
   ];
 
   return (
-    <header className="min-h-[8vh] px-[10rem] xl:px-[15rem] border-b-2 flex items-center">
+    <header className="min-h-[8vh] py-2 px-[8rem] border-b-2 flex items-center">
       <nav className="flex-1 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/icon--logo-lg.png" alt="logo" width={50} height={50} />

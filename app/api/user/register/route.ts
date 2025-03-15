@@ -1,6 +1,5 @@
 import { auth } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
-import prisma from "@/utils/connect";
 
 export async function POST(req: NextRequest) {
   try {
@@ -14,8 +13,6 @@ export async function POST(req: NextRequest) {
     let user = await prisma.user.findUnique({
       where: { clerkId: userId },
     });
-
-    //if user does not exist, create a new user
 
     if (!user) {
       user = await prisma.user.create({

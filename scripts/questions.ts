@@ -1,4 +1,4 @@
-const questions = require("../data/programmingQuestions.js");
+const questions = require("../data/biologyQuestions.js");
 
 let questionsPrisma: any;
 
@@ -13,7 +13,7 @@ async function seedQuestions() {
     const createdQuestion = await questionsPrisma.question.create({
       data: {
         text: question.text,
-        quizId: "6764ab1258d3aabee390cc72",
+        quizId: "67d5a37d7eac336752629eed",
         options: {
           create: question.options,
         },

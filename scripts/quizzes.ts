@@ -5,55 +5,55 @@ let quizzesPrisma: any;
 const quizzes = [
   {
     title: "Computer Science Basics",
-    description: "A quiz about fundamental computer science concepts.",
-    categoryId: "676482a0a9fd4923c30ff2d7", // Replace with the actual category ID
+    description: "Kuis tentang konsep dasar ilmu komputer.",
+    categoryId: "67d5a2d5ea02deed5db15188", // ID kategori: Computer Science
   },
   {
     title: "Programming Fundamentals",
-    description: "Test your knowledge of basic programming concepts.",
-    categoryId: "6764829fa9fd4923c30ff2d6",
+    description: "Uji pengetahuan Anda tentang konsep dasar pemrograman.",
+    categoryId: "67d5a2d5ea02deed5db15187", // ID kategori: Programming
   },
   {
     title: "Data Structures",
-    description: "Assess your understanding of data structures.",
-    categoryId: "676482a0a9fd4923c30ff2d7",
+    description: "Tingkatkan pemahaman Anda tentang struktur data.",
+    categoryId: "67d5a2d5ea02deed5db15188", // ID kategori: Computer Science
   },
   {
     title: "Physics",
-    description: "Test your knowledge of physics",
-    categoryId: "6764829fa9fd4923c30ff2d4",
+    description: "Uji pengetahuan Anda tentang fisika.",
+    categoryId: "67d5a2d6ea02deed5db1518d", // ID kategori: Physics
   },
   {
     title: "Biology",
-    description: "Test your knowledge of physics",
-    categoryId: "6764829fa9fd4923c30ff2d4",
+    description: "Uji pengetahuan Anda tentang biologi.",
+    categoryId: "67d5a2d6ea02deed5db1518e", // ID kategori: Biology
   },
   {
     title: "Chemistry",
-    description: "Test your knowledge of physics",
-    categoryId: "6764829fa9fd4923c30ff2d4",
+    description: "Uji pengetahuan Anda tentang kimia.",
+    categoryId: "67d5a2d5ea02deed5db15185", // ID kategori: Science
   },
 ];
 
 async function seedQuizzes() {
   quizzesPrisma = new PrismaClient();
 
-  console.log("Seeding quizzes...");
+  console.log("Menambahkan kuis...");
 
   for (const quiz of quizzes) {
-    const craetedQuiz = await quizzesPrisma.quiz.create({
+    const kuisBaru = await quizzesPrisma.quiz.create({
       data: quiz,
     });
 
-    console.log("Created quiz: ", `${craetedQuiz.title}`);
+    console.log("Kuis berhasil dibuat: ", `${kuisBaru.title}`);
   }
 
-  console.log("Seeding quizzes completed.");
+  console.log("Penambahan kuis selesai.");
 }
 
 seedQuizzes()
   .catch((e) => {
-    console.log("Error seeding quizzes: ", e);
+    console.log("Terjadi kesalahan saat menambahkan kuis: ", e);
   })
   .finally(async () => {
     await quizzesPrisma.$disconnect();

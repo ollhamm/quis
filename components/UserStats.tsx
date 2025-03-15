@@ -65,16 +65,16 @@ function UserStats({ userStats }: any) {
       </div>
 
       <div className="mt-4">
-        <h1 className="font-bold text-2xl">Overview</h1>
+        <h1 className="font-bold text-2xl">Gambaran Umum</h1>
         <p className="text-muted-foreground">
-          A summary of your recent activity and performance
+          Rangkuman aktivitas dan kinerja Anda baru-baru ini
         </p>
       </div>
 
       <div className="grid grid-cols-3 gap-6 font-semibold">
         <div className="py-4 px-4 flex flex-col gap-1 border-2 rounded-lg shadow-[0_.3rem_0_0_rgba(0,0,0,0.1)]">
           <h2 className="font-bold text-xl">{user?.firstName}</h2>
-          <p className="text-gray-400 font-semibold">Recent Attempt</p>
+          <p className="text-gray-400 font-semibold">Percobaan Terbaru</p>
           <p className="text-sm text-gray-400 font-semibold">
             {formatTime(recentAttemptDate)}
           </p>
@@ -83,7 +83,7 @@ function UserStats({ userStats }: any) {
         <div className="py-4 px-4 flex gap-2 border-2 rounded-lg shadow-[0_.3rem_0_0_rgba(0,0,0,0.1)]">
           <div className="text-2xl text-blue-400">{crosshairs}</div>
           <div>
-            <p className="font-bold">Total Attempts</p>
+            <p className="font-bold">Total Percobaan</p>
             <p className="mt-2 font-bold text-3xl">{totalAttempts}</p>
           </div>
         </div>
@@ -91,7 +91,7 @@ function UserStats({ userStats }: any) {
         <div className="py-4 px-4 flex gap-2 border-2 rounded-lg shadow-[0_.3rem_0_0_rgba(0,0,0,0.1)]">
           <div className="text-2xl text-blue-400">{checkAbc}</div>
           <div>
-            <p className="font-bold">Total Completed</p>
+            <p className="font-bold">Total Selesai</p>
             <p className="mt-2 font-bold text-3xl">{totalCompleted}</p>
           </div>
         </div>
@@ -104,9 +104,9 @@ function UserStats({ userStats }: any) {
       </div>
 
       <div className="mt-4">
-        <h1 className="font-bold text-2xl">Detailed Category Stats</h1>
+        <h1 className="font-bold text-2xl">Statistik Kategori Terperinci</h1>
         <p className="text-muted-foreground">
-          Breakdown of performance by category
+          Perincian kinerja berdasarkan kategori
         </p>
       </div>
 
@@ -114,11 +114,11 @@ function UserStats({ userStats }: any) {
         <Table>
           <TableHeader className="text-base font-semibold">
             <TableRow>
-              <TableHead className="py-4">Category</TableHead>
-              <TableHead>Attempts</TableHead>
-              <TableHead>Completed</TableHead>
-              <TableHead>Average Score</TableHead>
-              <TableHead>Last Attempt</TableHead>
+              <TableHead className="py-4">Kategori</TableHead>
+              <TableHead>Percobaan</TableHead>
+              <TableHead>Selesai</TableHead>
+              <TableHead>Rata-rata Nilai</TableHead>
+              <TableHead>Upaya Terakhir</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

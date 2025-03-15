@@ -9,41 +9,42 @@ async function addCategories() {
     {
       name: "Science",
       description:
-        "Science is the pursuit and application of knowledge and understanding of the natural and social world following a systematic methodology based on evidence.",
+        "Ilmu pengetahuan adalah pencarian dan penerapan pengetahuan serta pemahaman tentang dunia alam dan sosial dengan mengikuti metodologi sistematis yang berdasarkan bukti.",
     },
     {
       name: "Technology",
-      description: "Dive into the latest technological advancements.",
+      description: "Jelajahi perkembangan teknologi terbaru.",
     },
     {
       name: "Programming",
-      description: "Learn about coding and software development.",
+      description:
+        "Pelajari tentang pengkodean dan pengembangan perangkat lunak.",
     },
     {
       name: "Computer Science",
-      description: "Understand the fundamentals of computers and algorithms.",
+      description: "Pahami dasar-dasar komputer dan algoritma.",
     },
     {
       name: "Mathematics",
-      description: "Master the language of numbers and patterns.",
+      description: "Kuasi bahasa angka dan pola.",
     },
     {
       name: "History",
-      description: "Discover the events that shaped our world.",
+      description: "Temukan peristiwa yang membentuk dunia kita.",
     },
     {
       name: "Art",
-      description: "Appreciate creativity through various forms of art.",
+      description: "Hargai kreativitas melalui berbagai bentuk seni.",
     },
     {
       name: "Geography",
-      description: "Explore the physical features of our planet.",
+      description: "Jelajahi fitur fisik planet kita.",
     },
     {
       name: "Physics",
-      description: "Unravel the laws governing the universe.",
+      description: "Ungkap hukum-hukum yang mengatur alam semesta.",
     },
-    { name: "Biology", description: "Study the science of living organisms." },
+    { name: "Biology", description: "Pelajari ilmu tentang organisme hidup." },
   ];
 
   console.log("Adding Categories...");

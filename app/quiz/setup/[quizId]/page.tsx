@@ -88,14 +88,14 @@ function page() {
   };
 
   return (
-    <div>
+    <div className="min-h-screen flex items-center justify-center">
       <div className="py-[6rem] w-[50%] fixed left-1/2 top-[45%] translate-x-[-50%] translate-y-[-50%] p-6 border-2 rounded-xl shadow-[0_.5rem_0_0_rgba(0,0,0,0.1)] mx-auto">
-        <h1 className="text-4xl font-bold mb-4">Quiz Setup</h1>
+        <h1 className="text-4xl font-bold mb-4">Pengaturan Kuis</h1>
 
         <div className="space-y-6">
           <div className="space-y-2">
             <Label htmlFor="questionCount" className="text-lg">
-              Number of Questions
+              Jumlah Pertanyaan
             </Label>
             <Input
               type="number"
@@ -108,26 +108,8 @@ function page() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="category" className="text-lg">
-              Category
-            </Label>
-
-            <Select disabled>
-              <SelectTrigger>
-                <SelectValue placeholder="Select a category" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="general">General Knowledge</SelectItem>
-                <SelectItem value="science">Science</SelectItem>
-                <SelectItem value="history">History</SelectItem>
-                <SelectItem value="geography">Geography</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="space-y-2">
             <Label htmlFor="difficulty" className="text-lg">
-              Difficulty
+              Kesulitan
             </Label>
 
             <Select
@@ -138,23 +120,23 @@ function page() {
                 <SelectValue placeholder="Select difficulty" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="unspecified">Unspecified</SelectItem>
-                <SelectItem value="easy">Easy</SelectItem>
-                <SelectItem value="medium">Medium</SelectItem>
-                <SelectItem value="hard">Hard</SelectItem>
+                <SelectItem value="unspecified">Tidak ditentukan</SelectItem>
+                <SelectItem value="easy">Mudah</SelectItem>
+                <SelectItem value="medium">Menengah</SelectItem>
+                <SelectItem value="hard">Sulit</SelectItem>
               </SelectContent>
             </Select>
           </div>
         </div>
       </div>
 
-      <div className="w-full py-[4rem] flex items-center justify-center fixed bottom-0 left-0 bg-white border-t-2">
+      <div className="w-full py-[3rem] flex items-center justify-center fixed bottom-0 left-0 bg-white">
         <Button
           variant={"blue"}
           className="px-10 py-6 font-bold text-white text-xl rounded-xl"
           onClick={startQuiz}
         >
-          <span className="flex items-center gap-2">{play} Start</span>
+          <span className="flex items-center gap-2">{play} Mulai</span>
         </Button>
       </div>
     </div>

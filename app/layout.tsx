@@ -38,9 +38,7 @@ export default function RootLayout({
           <body className={`${nunito.className}  antialiased`}>
             <Toaster position="top-center" />
             <Header />
-            <main className="py-8 mx-[15rem] xl:mx-[25rem] h-full">
-              {children}
-            </main>
+            <main className="py-8 px-[8rem] h-full">{children}</main>
           </body>
         </ContextProvider>
       </ClerkProvider>

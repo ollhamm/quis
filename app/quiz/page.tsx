@@ -132,7 +132,7 @@ function page() {
   };
 
   return (
-    <div className="py-[2.5rem]">
+    <div className="mt-[4rem] mb-[8rem] min-h-screen w-full flex flex-col items-center justify-center">
       {shuffledQuestions[currentIndex] ? (
         <div className="space-y-6">
           <div className="flex flex-col gap-6">
@@ -168,7 +168,7 @@ function page() {
         <p className="text-lg">No questions found for this quiz</p>
       )}
 
-      <div className="w-full py-[4rem] fixed bottom-0 left-0 border-t-2 flex items-center justify-center">
+      <div className="w-full py-4 fixed bottom-0 left-0 flex items-center justify-center">
         <Button
           className="px-10 py-6 font-bold text-white text-xl rounded-xl"
           variant={"green"}
@@ -195,7 +195,7 @@ function page() {
           {currentIndex < shuffledQuestions.length - 1 ? (
             <span className="flex items-center gap-2">{next} Next</span>
           ) : (
-            <span className="flex items-center gap-2">{flag} Finish</span>
+            <span className="flex items-center gap-2">{flag} Selesaikan</span>
           )}
         </Button>
       </div>

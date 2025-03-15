@@ -55,7 +55,7 @@ function QuizCard({ quiz }: Props) {
           <p className="text-gray-400 semi-bold text-sm flex items-center gap-2 leading-none">
             <span className="text-xl">{dots}</span>
             <span>
-              Total Questions:{" "}
+              Total Pertanyaan:{" "}
               <span className="font-bold text-gray-600">
                 {quiz.questions.length}
               </span>
