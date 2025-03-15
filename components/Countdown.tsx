@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 interface Props {
   intitialTimeLeft: number;
@@ -7,13 +8,14 @@ interface Props {
 
 function Countdown({ intitialTimeLeft }: Props) {
   const [timeLeft, setTimeLeft] = React.useState(intitialTimeLeft);
+  const router = useRouter();
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
-          window.location.reload();
+          router.refresh();
         }
 
         return prev - 1;
@@ -21,7 +23,7 @@ function Countdown({ intitialTimeLeft }: Props) {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [router]);
 
   return (
     <p>

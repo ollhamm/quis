@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import useCategories from "./useCategories";
 import { useUser } from "@clerk/nextjs";
 import axios from "axios";
-// test
+
 const GlobalContext = React.createContext();
 
 export const GlobalContextProvider = ({ children }) => {
