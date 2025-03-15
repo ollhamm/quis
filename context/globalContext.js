@@ -23,7 +23,9 @@ export const GlobalContextProvider = ({ children }) => {
 
     const registerUser = async () => {
       try {
-        await axios.post("/api/user/register");
+        await axios.post("https://quis-three.vercel.app/api/user/register", {
+          email: user.emailAddresses[0].emailAddress,
+        });
 
         console.log("User registered successfully!");
       } catch (error) {
