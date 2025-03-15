@@ -1,8 +1,8 @@
 import { auth } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
+import prisma from "@/utils/connect";
 
-export async function POST(req: NextRequest) {
-  console.log("POST request to /api/user/register received");
+export async function GET(req: NextRequest) {
   try {
     const { userId } = await auth();
 
@@ -10,23 +10,18 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    let user = await prisma.user.findUnique({
+    // find the user in the db
+    const user = await prisma.user.findUnique({
       where: { clerkId: userId },
     });
 
     if (!user) {
-      user = await prisma.user.create({
-        data: {
-          clerkId: userId,
-        },
-      });
-    } else {
-      console.log("User already exists");
+      return NextResponse.json({ error: "User not found" }, { status: 404 });
     }
 
     return NextResponse.json(user);
   } catch (error) {
     console.log("Error starting quiz: ", error);
-    return NextResponse.json({ error: "Error creating user" }, { status: 500 });
+    return NextResponse.json({ error: "Error getting user" }, { status: 500 });
   }
 }

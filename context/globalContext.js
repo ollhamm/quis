@@ -23,7 +23,7 @@ export const GlobalContextProvider = ({ children }) => {
 
     const registerUser = async () => {
       try {
-        await axios.post("/api/user/register");
+        await axios.post("/api/user/signup");
 
         console.log("User registered successfully!");
       } catch (error) {
