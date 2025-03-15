@@ -6,6 +6,15 @@ interface ICategory {
   quizzes: IQuiz[];
 }
 
+export interface IMaterial {
+  id: string;
+  title: string;
+  content: string;
+  image: string | null;
+  categoryId: string;
+  description: string | null;
+}
+
 interface IQuiz {
   id: string;
   title: string;

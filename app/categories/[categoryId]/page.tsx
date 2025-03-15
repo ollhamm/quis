@@ -3,6 +3,7 @@ import React from "react";
 import prisma from "@/utils/connect";
 import { IQuiz } from "@/types/types";
 import QuizCard from "@/components/quiz/QuizCard";
+import MaterialsCard from "@/components/quiz/MaterialCard";
 import { request } from "@arcjet/next";
 import { aj } from "@/lib/arcject";
 import Countdown from "@/components/Countdown";
@@ -77,14 +78,33 @@ async function page({ params }: any) {
     },
   });
 
+  const materials = await prisma.material.findMany({
+    where: { categoryId },
+  });
+
   return (
     <div>
-      <h1 className="mb-6 text-4xl font-bold">Semua Kuis</h1>
+      <h1 className="mb-6 text-4xl font-bold">Semua Kuis dan Materi</h1>
 
       {quizzes.length > 0 ? (
-        <div className="mb-8 grid grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-6">
+        <div>
           {quizzes.map((quiz) => (
-            <QuizCard key={quiz.id} quiz={quiz} />
+            <div key={quiz.id} className="mb-6">
+              <QuizCard quiz={quiz} />
+              <div className="mt-4">
+                <h3 className="text-2xl mt-8 font-bold mb-4">Materi Terkait</h3>
+                {/* Display related materials below each quiz */}
+                <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
+                  {materials
+                    .filter(
+                      (material) => material.categoryId === quiz.categoryId
+                    )
+                    .map((material) => (
+                      <MaterialsCard key={material.id} material={material} />
+                    ))}
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       ) : (

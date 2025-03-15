@@ -1,6 +1,8 @@
 import { auth } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 
+import prisma from "@/utils/connect";
+
 export async function POST(req: NextRequest) {
   try {
     const { userId } = await auth();
@@ -27,6 +29,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(user);
   } catch (error) {
     console.log("Error starting quiz: ", error);
-    return NextResponse.json({ error: "Error creating user" }, { status: 500 });
+    if (error instanceof Error) {
+      return NextResponse.json(
+        { error: `Error creating user: ${error.message}` },
+        { status: 500 }
+      );
+    }
+    return NextResponse.json({ error: "Unknown error" }, { status: 500 });
   }
 }

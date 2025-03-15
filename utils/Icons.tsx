@@ -3,6 +3,7 @@
 // https://undraw.co/illustrations
 
 export const home = <i className="fa-solid fa-house"></i>;
+export const book = <i className="fa-solid fa-book"></i>;
 export const chart = <i className="fa-solid fa-chart-simple"></i>;
 export const check = <i className="fa-solid fa-check"></i>;
 export const logout = <i className="fa-solid fa-right-from-bracket"></i>;

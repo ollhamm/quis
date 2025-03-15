@@ -77,7 +77,7 @@ function Header() {
               onClick={() => router.push("/sign-in")}
             >
               {login}
-              Login / Sign Up
+              Masuk / Daftar
             </Button>
           </SignedOut>
         </div>

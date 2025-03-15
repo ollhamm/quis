@@ -27,7 +27,18 @@ model Category{
   image         String?
   quizzes       Quiz[]
   categoryStats CategoryStat[] // reseve relation to CategoryStat
+  materials     Material[]
 }
+
+model Material {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String?
+  content     String
+  categoryId  String   @db.ObjectId
+  category    Category @relation(fields: [categoryId], references: [id])
+}
+
 
 model Quiz {
   id              String   @id @default(auto()) @map("_id") @db.ObjectId
