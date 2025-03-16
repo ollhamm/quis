@@ -25,24 +25,24 @@ function page() {
   let message = "";
 
   if (scorePercentage < 25) {
-    message = "You need to try harder!";
+    message = "Anda harus berusaha lebih keras!";
   } else if (scorePercentage >= 25 && scorePercentage < 50) {
-    message = "You're getting there! Keep practicing.";
+    message = "Kau sudah sampai di sana! Teruslah berlatih.";
   } else if (scorePercentage >= 50 && scorePercentage < 75) {
-    message = "Good effort! You're above average.";
+    message = "Usaha yang bagus! Anda berada di atas rata-rata.";
   } else if (scorePercentage >= 75 && scorePercentage < 100) {
-    message = "Great job! You're so close to perfect!";
+    message = "Kerja bagus! Anda hampir mendekati sempurna!";
   } else if (scorePercentage === 100) {
-    message = "Outstanding! You got everything right!";
+    message = "Luar biasa! Kau melakukan semuanya dengan benar!";
   }
 
   return (
     <div className="py-20 flex flex-col gap-4">
-      <h1 className="text-4xl font-bold text-center">Quiz Results</h1>
+      <h1 className="text-4xl font-bold text-center">Hasil Kuis</h1>
 
       <p className="text-2xl text-center mt-4">
-        You scored <span className="font-bold">{correctAnswers}</span> out of{" "}
-        {""}
+        Anda mencetak gol <span className="font-bold">{correctAnswers}</span>{" "}
+        dari {""}
         <span className="font-bold text-3xl">{totalQuestions}</span> {""}
       </p>
 
@@ -58,7 +58,7 @@ function page() {
           className="px-10 py-6 font-bold text-white text-xl rounded-xl"
           onClick={() => router.push("/quiz/setup/" + `${selectedQuiz.id}`)}
         >
-          {play} Play Again
+          {play} Mainkan Lagi
         </Button>
       </div>
     </div>

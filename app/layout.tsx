@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import { Nunito } from "next/font/google";
 import ContextProvider from "@/providers/ContextProvider";
 import { Toaster } from "react-hot-toast";
+import ButtonChat from "@/components/ButtonChat";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -35,10 +36,11 @@ export default function RootLayout({
       </head>
       <ClerkProvider>
         <ContextProvider>
-          <body className={`${nunito.className}  antialiased`}>
+          <body className={`${nunito.className} antialiased relative`}>
             <Toaster position="top-center" />
             <Header />
             <main className="py-8 px-[8rem] h-full">{children}</main>
+            <ButtonChat />
           </body>
         </ContextProvider>
       </ClerkProvider>

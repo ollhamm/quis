@@ -54,4 +54,28 @@ interface ICategoryStats {
   category: ICategory;
 }
 
-export type { ICategory, IQuiz, IQuestion, IOption, IResponse, ICategoryStats };
+interface message {
+  role: "user" | "assistant";
+  content: string;
+}
+
+interface InputProps {
+  label: string;
+  id: string;
+  name: string;
+  value: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder: string;
+  required: boolean;
+}
+
+export type {
+  ICategory,
+  IQuiz,
+  IQuestion,
+  IOption,
+  IResponse,
+  ICategoryStats,
+  message,
+  InputProps,
+};

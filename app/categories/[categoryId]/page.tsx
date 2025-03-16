@@ -108,9 +108,16 @@ async function page({ params }: any) {
           ))}
         </div>
       ) : (
-        <h1 className="text-2xl text-center mt-4">
-          No quizzes found for this Category
-        </h1>
+        <div className="flex flex-col items-center gap-2">
+          <img
+            src="/no-data.svg"
+            alt="No quizzes found"
+            className="mx-auto h-64 w-64"
+          />
+          <p className="text-md font-medium text-neutral-600">
+            Tidak ada kuis yang ditemukan untuk Kategori ini
+          </p>
+        </div>
       )}
     </div>
   );
