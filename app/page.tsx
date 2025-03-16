@@ -2,10 +2,24 @@
 
 import HomeCard from "@/components/quiz/HomeCard";
 import { useGlobalContext } from "@/context/globalContext";
+import Loader from "@/components/Loader";
 import { ICategory } from "@/types/types";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const { categories } = useGlobalContext();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    if (categories.length > 0) {
+      setIsLoading(false);
+    }
+  }, [categories]);
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
   return (
     <div>
       <h1 className="text-4xl font-bold">Katalog Kuis</h1>
