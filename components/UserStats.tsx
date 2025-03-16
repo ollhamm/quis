@@ -132,7 +132,7 @@ function UserStats({ userStats }: any) {
                 <TableCell>
                   {category.averageScore !== null
                     ? category.averageScore.toFixed(2)
-                    : "N/A"}
+                    : "0"}
                 </TableCell>
                 <TableCell>{formatTime(category.lastAttempt)}</TableCell>
               </TableRow>

@@ -1,5 +1,7 @@
 import moment from "moment";
+import "moment/locale/id";
 
 export const formatTime = (date: Date) => {
-  return moment(date).format("Do MMMM YYYY, HH:mm");
+  moment.locale("id");
+  return moment(date).format("D MMMM YYYY, HH:mm");
 };

@@ -137,7 +137,7 @@ function page() {
         <div className="space-y-6">
           <div className="flex flex-col gap-6">
             <p className="py-3 px-6 border-2 text-xl font-bold self-end rounded-lg shadow-[0_.3rem_0_0_rgba(0,0,0,0.1)]">
-              Question: <span>{currentIndex + 1}</span> /{" "}
+              Pertanyaan: <span>{currentIndex + 1}</span> /{" "}
               <span className="text-3xl">{shuffledQuestions.length}</span>
             </p>
             <h1 className="mt-4 px-10 text-5xl font-bold text-center">
