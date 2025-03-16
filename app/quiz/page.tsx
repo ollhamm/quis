@@ -179,7 +179,7 @@ function page() {
               } else {
                 const sound = new Audio("/sounds/error.mp3");
                 sound.play();
-                toast.error("Please select an option to continue");
+                toast.error("Pilih opsi untuk melanjutkan");
               }
             } else {
               if (activeQuestion?.id) {
@@ -187,7 +187,7 @@ function page() {
               } else {
                 const sound = new Audio("/sounds/error.mp3");
                 sound.play();
-                toast.error("Please select an option to continue");
+                toast.error("Pilih opsi untuk melanjutkan");
               }
             }
           }}

@@ -83,7 +83,9 @@ function page() {
       // pushh to the quiz page
       router.push("/quiz");
     } else {
-      toast.error("No questions found for the selected criteria");
+      toast.error(
+        "Tidak ada pertanyaan yang ditemukan untuk kriteria yang dipilih"
+      );
     }
   };
 

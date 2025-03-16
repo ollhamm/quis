@@ -18,7 +18,7 @@ function ButtonChat() {
       )}
       <button
         onClick={toggleModal}
-        className="bg-blue-600 hover:bg-blue-700 text-white py-6 px-6 rounded-full shadow-lg transition-all duration-300"
+        className="bg-blue-600 hover:bg-blue-700 border text-white py-6 px-6 rounded-full shadow-lg transition-all duration-300"
         aria-label="Chat"
       >
         <i className="fa-regular fa-comment-dots text-2xl"></i>

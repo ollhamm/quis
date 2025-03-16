@@ -80,7 +80,7 @@ const MergeChat: React.FC<MergeChatProps> = ({ onSendMessage }) => {
   const MAX_LENGTH = 500;
 
   return (
-    <div className="fixed bottom-24 w-[350px] rounded-lg bg-white border border-gray-200 shadow-lg">
+    <div className="fixed bottom-24 w-[350px] rounded-lg bg-white border border-gray-200 shadow-md">
       <div className="w-full mx-auto px-4 py-2">
         <form onSubmit={handleSubmit} className="relative">
           <div className="flex items-start space-x-2">

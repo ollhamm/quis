@@ -117,7 +117,7 @@ function UserStats({ userStats }: any) {
               <TableHead className="py-4">Kategori</TableHead>
               <TableHead>Percobaan</TableHead>
               <TableHead>Selesai</TableHead>
-              <TableHead>Rata-rata Nilai</TableHead>
+              <TableHead>Rata-rata Sekor</TableHead>
               <TableHead>Upaya Terakhir</TableHead>
             </TableRow>
           </TableHeader>
