@@ -53,7 +53,7 @@ function UserStats({ userStats }: any) {
   console.log("User stats:", userStats.categoryStats);
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 animate-fade-in">
       <div className="h-[15rem] px-8 flex items-center justify-center border-2 rounded-xl shadow-[0_.3rem_0_0_rgba(0,0,0,0.1)]">
         <Image
           src={user?.imageUrl || "/user.png"}

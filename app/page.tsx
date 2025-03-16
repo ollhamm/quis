@@ -21,7 +21,7 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className="animate-fade-in">
       <h1 className="text-4xl font-bold">Katalog Kuis</h1>
 
       <div className="mt-6 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
