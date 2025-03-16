@@ -10,7 +10,7 @@ export default function ModalChat() {
     { content: string; role: "assistant" | "user" }[]
   >([
     {
-      content: "Halo! Ada yang bisa saya bantu hari ini?",
+      content: "Halo! Ada yang bisa saya bantu?",
       role: "assistant",
     },
   ]);

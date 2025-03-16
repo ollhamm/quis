@@ -10,7 +10,7 @@ type Message = {
 const ChatMessages = () => {
   const messages: Message[] = [
     {
-      content: "Halo! Ada yang bisa saya bantu hari ini?",
+      content: "Halo! Ada yang bisa saya bantu?",
       sender: "assistant",
     },
     {
