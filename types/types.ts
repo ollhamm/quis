@@ -10,7 +10,6 @@ export interface IMaterial {
   id: string;
   title: string;
   content: string;
-  image: string | null;
   categoryId: string;
   description: string | null;
 }
@@ -69,6 +68,11 @@ interface InputProps {
   required: boolean;
 }
 
+interface SubmitButtonProps {
+  label: string;
+  isLoading: boolean;
+}
+
 export type {
   ICategory,
   IQuiz,
@@ -78,4 +82,5 @@ export type {
   ICategoryStats,
   message,
   InputProps,
+  SubmitButtonProps,
 };
