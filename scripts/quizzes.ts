@@ -33,6 +33,11 @@ const quizzes = [
     description: "Uji pengetahuan Anda tentang kimia.",
     categoryId: "67d5a2d5ea02deed5db15185", // ID kategori: Science
   },
+  {
+    title: "Bahasa indonesia",
+    description: "Uji pengetahuan Anda tentang Bahasa Indonesia.",
+    categoryId: "67d5a2d6ea02deed5db1518c",
+  },
 ];
 
 async function seedQuizzes() {

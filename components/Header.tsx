@@ -29,7 +29,7 @@ function Header() {
       <nav className="flex-1 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/icon--logo-lg.png" alt="logo" width={50} height={50} />
-          <h1 className="text-3xl font-bold text-blue-400">Kwizi</h1>
+          <h1 className="text-3xl font-bold text-blue-400">BahasaKu</h1>
         </Link>
 
         <ul className="flex items-center gap-8">
