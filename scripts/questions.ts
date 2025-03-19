@@ -1,4 +1,4 @@
-const questions = require("../data/biologyQuestions.js");
+const questions = require("../data/indonesianQuestions.js");
 
 let questionsPrisma: any;
 

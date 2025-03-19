@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import MergeChat from "./chat/MergeChat";
 import AreaChat from "./areachat/AreaChat";
-import { Ollama } from "ollama/browser";
 
 export default function ModalChat() {
   const [messages, setMessages] = useState<
@@ -22,21 +21,29 @@ export default function ModalChat() {
         { content: message, role: "user" },
       ]);
 
-      const ollama = new Ollama({ host: "http://localhost:11434" });
-
-      const response = await ollama.chat({
-        model: "deepseek-r1:1.5b",
-        messages: [
-          {
-            role: "user",
-            content: message,
-          },
-        ],
+      const response = await fetch("/api/ollama", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: "deepseek-r1:1.5b",
+          messages: [
+            {
+              role: "user",
+              content: message,
+            },
+          ],
+        }),
       });
 
-      let cleanResponse = response.message?.content || "";
-      cleanResponse = cleanResponse.replace(/<think>.*?<\/think>/gs, "").trim();
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
 
+      const data = await response.json();
+      let cleanResponse = data.message?.content || "";
+      cleanResponse = cleanResponse.replace(/<think>.*?<\/think>/gs, "").trim();
       cleanResponse = cleanResponse.replace(/<[^>]+>/g, "").trim();
 
       setMessages((prevMessages) => [
